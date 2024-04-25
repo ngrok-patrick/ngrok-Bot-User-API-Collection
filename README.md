@@ -2,7 +2,8 @@
 
 This is a Sample Postman Collection for using the ngrok Bot User API
 
-This is a simple Postman Collection to get folks started using the new ngrok Bot Users API
+This is a simple Postman Collection to get folks started using the new ngrok Bot Users API<br/>
+[ngrok Bot User Collection](https://github.com/ngrok-patrick/ngrok-Bot-User-API-Collection/blob/main/ngrok%20Bot%20User%20API%20Collection.json)
 
 Of if you like, you can just Paste the Curl Requests into Postman 
 
