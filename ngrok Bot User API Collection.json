@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "dcbb7ec8-f3a3-4be9-aaf0-e304590f84e1",
+		"name": "ngrok Bot User API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31215901"
+	},
+	"item": [
+		{
+			"name": "Create Bot User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer PUT_YOUR_NGROK_API_KEY_HERE"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Ngrok-Version",
+						"value": "2"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"new bot user from API, Name Must Be Unique\",\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "https://api.ngrok.com/bot_users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ngrok",
+						"com"
+					],
+					"path": [
+						"bot_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inactivate Bot User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer PUT_YOUR_NGROK_API_KEY_HERE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"active\": false\n}"
+				},
+				"url": {
+					"raw": "https://api.ngrok.com/bot_users/bot_2fW4JZ4hIr5NaXOUh1Je7SIUahi",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ngrok",
+						"com"
+					],
+					"path": [
+						"bot_users",
+						"bot_2fW4JZ4hIr5NaXOUh1Je7SIUahi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Bot User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer PUT_YOUR_NGROK_API_KEY_HERE"
+					}
+				],
+				"url": {
+					"raw": "https://api.ngrok.com/bot_users/bot_2fW4JZ4hIr5NaXOUh1Je7SIUahi",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ngrok",
+						"com"
+					],
+					"path": [
+						"bot_users",
+						"bot_2fW4JZ4hIr5NaXOUh1Je7SIUahi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Bot User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.ngrok.com/bot_users/bot_User_GUID",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ngrok",
+						"com"
+					],
+					"path": [
+						"bot_users",
+						"bot_User_GUID"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
